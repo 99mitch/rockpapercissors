@@ -1,8 +1,8 @@
 // === BACKEND: server.js ===
 // This file should be placed in a Node.js backend environment only.
-const express = require('express');
-const http = require('http');
-const { Server } = require('socket.io');
+import express from 'express';
+import http from 'http';
+import { Server } from 'socket.io';
 
 const app = express();
 const server = http.createServer(app);
@@ -70,4 +70,4 @@ io.on('connection', socket => {
 });
 
 const PORT = process.env.PORT || 3001;
-server.listen(PORT, () => console.log(`Socket server running on port ${PORT}`));
+server.listen(PORT, () => console.log(`Socket server running on http://localhost:${PORT}`));
